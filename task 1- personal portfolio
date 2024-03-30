@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Web Developer</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    header img {
+      border-radius: 50%;
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .project {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #1d1b1b;
+      color: rgb(40, 36, 117);
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Paritosh photograph.jpg" alt="PARITOSH SAINI">
+    <h1>Your Name</h1>
+    <p>Web Developer</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate and dedicated web developer . 
+      Over the years, I have gained experience working on various projects and honing my skills in 
+      HTML,CSS and JavaScript. My goal is to create efficient and scalable web solutions 
+      that provide a seamless user experience.
+    </p>
+    <h3>Education</h3>
+    <p>I am in third year of engineering . My branch is Computer Engineering</p>
+    <h3>I have done an internship in CodSoft as a java developer </h3>
+    
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Project Title 1</h3>
+      <p>Description of the project. Highlight key technologies and your role.</p>
+    </div>
+    <div class="project">
+      <h3>Project Title 2</h3>
+      <p>Description of the project. Highlight key technologies and your role.</p>
+    </div>
+    <!-- Add more project sections as needed -->
+  </section>
+
+  <footer>
+    <p>Contact: your.email@example.com | Follow Me: @your_username</p>
+  </footer>
+
+</body>
+</html>

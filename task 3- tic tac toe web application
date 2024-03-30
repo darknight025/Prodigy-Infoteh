@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 4px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            font-size: 2em;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="board"></div>
+    <div id="message"></div>
+
+    <script>
+        let currentPlayer = 'X';
+        let gameBoard = ['', '', '', '', '', '', '', '', ''];
+        let gameActive = true;
+
+        const boardElement = document.getElementById('board');
+        const messageElement = document.getElementById('message');
+
+        // Create cells dynamically
+        for (let i = 0; i < 9; i++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.dataset.index = i;
+            cell.addEventListener('click', handleCellClick);
+            boardElement.appendChild(cell);
+        }
+
+        function handleCellClick(event) {
+            const clickedIndex = event.target.dataset.index;
+
+            if (gameBoard[clickedIndex] === '' && gameActive) {
+                gameBoard[clickedIndex] = currentPlayer;
+                event.target.textContent = currentPlayer;
+
+                if (checkWin()) {
+                    messageElement.textContent = `Player ${currentPlayer} wins!`;
+                    gameActive = false;
+                } else if (gameBoard.every(cell => cell !== '')) {
+                    messageElement.textContent = 'It\'s a draw!';
+                    gameActive = false;
+                } else {
+                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                    messageElement.textContent = `Player ${currentPlayer}'s turn`;
+                }
+            }
+        }
+
+        function checkWin() {
+            const winPatterns = [
+                [0, 1, 2],
+                [3, 4, 5],
+                [6, 7, 8],
+                [0, 3, 6],
+                [1, 4, 7],
+                [2, 5, 8],
+                [0, 4, 8],
+                [2, 4, 6],
+            ];
+
+            return winPatterns.some(pattern =>
+                pattern.every(index => gameBoard[index] === currentPlayer)
+            );
+        }
+    </script>
+
+</body>
+
+</html>
