@@ -1,0 +1,119 @@
+@import "../../app.scss";
+
+.contact {
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  @include mobile {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 100px;
+
+    @include mobile {
+      gap: 20px;
+      text-align: center;
+      align-items: center;
+      margin-top: 70px;
+    }
+    h2{
+      font-size: 16px;
+      color: orange;
+    }
+
+    h1 {
+      font-size: 70px;
+      line-height: 88px;
+      color: orange;
+
+      @include mobile {
+        font-size: 36px;
+      }
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+    display: flex;
+
+    
+    @include mobile {
+      padding: 50px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    .phoneSvg {
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include mobile{
+        margin-right: 69px;
+      }
+
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+        width: 520px;
+        
+
+        @include mobile {
+          width: 190%;
+          padding: 10px;
+          margin-left: -20px;
+        }
+      }
+
+      button {
+        padding: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: orange;
+        cursor: pointer;
+        font-weight: 500;
+        width: 100%;
+        font-size: 16px;
+        @include mobile {
+          width: 190%;
+          font-size: 16px;
+          font-weight: 500;
+          margin-left: -20px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+

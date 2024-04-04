@@ -1,0 +1,340 @@
+@import "../../app.scss";
+
+.about{
+    @include mobile{
+      width: 110%;
+    }  
+
+    .main-title{
+        text-align: center;
+
+      @include mobile{
+    
+      }
+
+        h2 {
+
+            @include mobile{
+                text-align: center;
+                font-size: 2rem;
+                span{font-size: 2rem;}
+                margin-top: 59px;
+        
+             }
+
+            position: relative;
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: 700;
+            span { color: orange }
+            .bg-text {
+
+
+              @include mobile{
+               display: none;
+                
+                 }
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: #2a2e35;
+                transition: all .4s ease-in-out;
+                z-index: -1;
+                transform: translate(-50%, -50%);
+                font-weight: 800;
+                font-size: 6.3rem;
+            }
+        }
+
+    }
+.wrapper{
+    max-width: 1366px;
+    height: 100%;
+    margin-top: 40px;
+    margin-left: 79px;
+
+
+@include mobile{
+    margin-top: 50px;
+}
+
+
+    .about-container{
+
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -70px;
+       
+
+    }
+
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+
+    .right-about {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+        margin-right: 40px;
+        margin-top: 13px;
+
+       @include mobile{
+        margin-top: 20px;
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+
+      
+        .about-item {
+            width: 100%;
+           
+            height: 75%;
+
+            @include mobile{
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            }
+
+            border: 1px solid #2a2e35;;
+            border-radius: 5px;
+            transition: all .4s ease-in-out;
+            box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+            &:hover {
+                cursor: default;
+                transform: translateY(-5px);
+
+                @include mobile{
+                    border: 2px solid orange; 
+                }
+
+                border: 1px solid orange;
+                box-shadow: 1px 4px 15px rgba(0,0,0,.32);
+            }
+
+
+
+            .abt-text {
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                .large-text {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    color:orange
+                }
+                .small-text {
+
+                    @include mobile{
+                        font-size: 1rem;
+                    }
+
+                    padding-left: 3rem;
+                    position: relative;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    color: #dbe1e8;;
+                    letter-spacing: 2px;
+                    margin-top: 6px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 15px;
+                        width: 2rem;
+                        height: 2px;
+                        background-color:#2a2e35;;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    .left-about{
+        margin-top: -70px;
+        margin-left: -80px;
+        
+
+            padding-left: 4rem;
+        p {
+
+         @include mobile{
+            margin-top: 30px;
+            font-size: 13.5px;
+            margin-left: 40px;
+         }
+
+           font-size: 15px;
+            line-height: 2rem;
+            padding: 1rem;
+            color: #dbe1e8;;
+        }
+
+
+        h4 {
+            @include mobile{
+              margin-right: -80px;
+            }
+
+            margin-top: -10px;
+            margin-left: 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: orange;
+            span{color: white;}
+        }
+button{
+        width: 90px;
+        height: 55px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 7px;
+        background-color: orange;
+        color: black;
+        margin-left: 20px;
+        
+        cursor: pointer;
+        font-weight: 800;
+
+        @include mobile{
+            margin-left: 170px;
+        }
+}
+
+        
+                
+            }
+        }
+    }
+        .about-stats { 
+
+        @include mobile{
+            display: none;
+        }
+
+         padding-bottom: 4rem;
+         width: 80%;
+         height: 80%;
+         padding-left: 300px;
+         gap: 2px;
+         margin-bottom: 120px;
+
+            .stat-title {
+
+                @include mobile{
+                    align-items: center;
+                    margin-left: -160px;
+                }
+                
+                margin-top: -130px;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+                font-size: 1.9rem;
+                text-align: center;
+                padding: 3rem 0;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    width: 30%;
+                    height: 1px;
+                    background-color: #2a2e35;;
+                    transform: translateX(-50%);
+                }
+            }
+
+
+            .progress-bars {
+                
+              
+           @include mobile{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            
+           }
+                
+               
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 2rem;
+                margin-top: -50px;
+                .progress-bar {
+                    display: flex;
+                    flex-direction: column;
+                    border: none;
+                    border-radius: 3px;
+                                      
+
+                    @include mobile{
+                        margin-left: -450px;
+                    }
+                    
+                  
+                    .prog-title {
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+                    .progress-con {
+                        display: flex;
+                        align-items: center;
+                        .prog-text {
+                            color:  #b2becd;
+                            font-weight: 500;
+                        }
+                        .progress {
+
+                            @include mobile{
+                                width: 50%;
+                            }
+
+                            width: 100%;
+                            height: .45rem;
+                            background-color: #454e56;
+                            margin-left: 1rem;
+                            position: relative;
+                            span {
+
+                                @include mobile{
+                                    width: 50%;
+                                }
+
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                background-color:  orange;
+                                transition: all .4s ease-in-out;
+                                width: 60%;
+                            }
+                            .C { width: 85%; }
+                            .React { width: 70%; }
+                            .js { width: 70%; }
+                            .Mongodb{ width: 60%; }
+                            .Node{ width: 70%; }
+                            .python{ width: 70%; }
+                            .java {width: 70%; }
+                            .Docker{width: 40%; }                                                     
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
